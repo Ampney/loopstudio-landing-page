@@ -1,0 +1,23 @@
+/* import */
+@import "[Alata](https://fonts.google.com/specimen/Alata)";
+@import "[Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)";
+@tailwind base;
+@tailwind component;
+@tailwind utilities;
+
+
+/* styles */
+
+.position {
+  @apply uppercase text-white text-left text-2xl w-300 relative mx-4 left-0 -top-400;
+}
+
+.position-adj {
+  @apply uppercase text-white text-left text-2xl w-400 relative mx-4 left-0 -top-400;
+}
+
+.h2-Josefin {
+  @apply block text-white text-left border-white border-2 mx-100 my-200 p-100 uppercase w-auto text-4xl;
+}
+
+/* @layer components {} */
