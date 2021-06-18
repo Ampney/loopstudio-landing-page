@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <!-- <meta http-equiv="refresh" content="30"> -->
     <title>Frontend Mentor | Loopstudios landing page</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
     <link rel="stylesheet" href="base.css">
@@ -13,90 +14,105 @@
   </head>
   <body>
     <!-- header -->
-      <header class="bg-mobile bg-cover bg-no-repeat pt-100 pb-200 lg:bg-logo lg:py-105">
+      <header class="bg-mobile bg-cover bg-no-repeat pt-105 pb-200 lg:bg-logo lg:py-105">
         <!-- navbar -->
         <nav class="flex justify-between mx-2 md:mx-105 px-4">
             <img src="../images/logo.svg" alt="logo" class="my-4 px-2">
-            <img src="../images/icon-hamburger.svg" alt="" class="my-4 px-2 py-2 w-8 h-8 md:hidden">
+            <img src="../images/icon-hamburger.svg" alt="" id="hamburger" class="my-4 px-2 py-2 w-8 h-8 md:hidden">
+
+            <div id="mobileMenu" class="hidden absolute w-full bg-black h-full top-0 left-0 mt-105 px-105 md:hidden lg:hidden">    <!--mobile-menu-->
+              <div class="flex justify-between">
+                <img src="../images/logo.svg" alt="logo" class="my-100 px-2">
+                <img src="../images/icon-close.svg" alt="close" id="close" class="my-100 px-2 w-8 h-8">
+              </div>
+              <span class="text-white font-Alata text-3xl">
+                <ul class="px-2 mt-100">
+                  <li class="py-2"><a href="/">About</a></li>
+                  <li class="py-2"><a href="/">Careers</a></li>
+                  <li class="py-2"><a href="/">Events</a></li>
+                  <li class="py-2"><a href="/">Products</a></li>
+                  <li class="py-2"><a href="/">Support</a></li>
+                </ul>
+              </span>
+            </div>
             <div class="hidden md:flex">
-          <span class="text-base items-center mx-2 p-4 text-white">
-            <ul class="flex lg:cursor-pointer hover:border-b-2 hover:border-white items-end">
-              <li class="mx-2 px-auto lg:text-xl"><a href="/">About</a></li>
-              <li class="mx-2 px-auto lg:text-xl"><a href="/">Careers</a></li>
-              <li class="mx-2 px-auto lg:text-xl"><a href="/">Events</a></li>
-              <li class="mx-2 px-auto lg:text-xl"><a href="/">Products</a></li>
-              <li class="mx-2 px-auto lg:text-xl"><a href="/">Support</a></li>
+          <span class="text-base items-center mx-2 p-4 text-white font-Alata">
+            <ul class="flex lg:cursor-pointer items-end">
+              <li class="mx-2 px-auto lg:text-xl hovering"><a href="/">About</a></li>
+              <li class="mx-2 px-auto lg:text-xl hovering"><a href="/">Careers</a></li>
+              <li class="mx-2 px-auto lg:text-xl hovering"><a href="/">Events</a></li>
+              <li class="mx-2 px-auto lg:text-xl hovering"><a href="/">Products</a></li>
+              <li class="mx-2 px-auto lg:text-xl hovering"><a href="/">Support</a></li>
             </ul>
           </span>
         </div>
         </nav>
-        <div class="h2-Josefin font-Josefin Sans lg:w-500 text-6xl lg:p-12 lg:mx-20">
-          <h2>immersive experiences that deliver</h2>
+        <div class="h2-Josefin font-Josefin-Sans lg:w-500  lg:p-12 lg:mx-20">
+          <h2 class="lg:text-6xl xl:text-40">immersive experiences that deliver</h2>
         </div>
       </header>
       <!-- main-banner -->
       <main class="block text-center mx-100 my-100 lg:relative">
           <img src="../images/desktop/image-interactive.jpg" alt="img" class="w-full lg:w-700">
-        <aside class="py-100 w-full md:py-100 lg:pb-0 lg:absolute left-500 top-28 lg:w-500 bg-white lg:pt-105 px-105 xl:top-500 xl:w-400 xl:pt-105 md:text-center lg:text-left">
-          <h2 class="text-4xl font-Josefin Sans">The leader in interactive VR</h2>
-          <p class="text-center text-md py-4 md:text-center w-full lg:text-left">Founded in 2011, Loopstudios has been producing world-class virtual reality
-          projects for some of the best companies around the globe. Our award-winning
-          creations have transformed businesses through digital experiences that bind
+        <aside class="py-100 w-full md:py-100 lg:pb-0 lg:absolute left-500 top-28 lg:w-500 bg-white lg:pt-105 px-105 xl:top-400 xl:w-2/6 xl:pt-12 md:text-center lg:text-left">
+          <h2 class="text-4xl font-Josefin-Sans md:normal-case lg:uppercase">The leader in interactive VR</h2>
+          <p class="font-Alata text-center text-md py-4 md:text-center w-full lg:text-left lg:pt-4 lg:pb-0">Founded in 2011, Loopstudios has been producing world-class virtual reality
+          projects for some of the best companies around the globe. Our award-winning creations have transformed businesses through digital experiences that bind
           to their brand.</p>
         </aside>
       </main>
       <section>
         <div class="flex justify-center text-center lg:justify-between mx-105 my-8">
-          <p class="font-Josefin Sans uppercase font-light text-4xl p-2">Our creations</p>
-          <a href="/"><p class="my-3 text-xl w-28 h-8 border-2 border-black bg-white text-center uppercase mobile:hidden md:hidden lg:block cursor-pointer hover:text-white hover:bg-black">See all</p></a>
+          <p class="font-Josefin-Sans uppercase font-light text-4xl p-2">Our creations</p>
+          <a href="/" class="md:mx-0 xl:mx-12"><p class="font-Josefin-Sans my-3 text-xl w-28 h-8 border-2 border-black bg-white text-center uppercase mobile:hidden md:hidden lg:block cursor-pointer hover:text-white hover:bg-black">See all</p></a>
         </div>
 
         <!-- image section -->
         <div class="text-center my-2 mx-105 justify-center">
-          <div class="grid col-span-2 lg:grid-cols-4 gap-x-8 justify-center">
-            <div class="py-4">
+          <div class="grid col-span-2 lg:grid-cols-4 gap-x-4 justify-center">
+            <div class="py-4 hover:text-black hover:opacity-50">
               <img src="../images/mobile/image-deep-earth.jpg" alt="deep-earth" class="w-full lg:hidden"> <!--mobile-block-->
               <img src="../images/desktop/image-deep-earth.jpg" class="md:hidden mobile:hidden lg:block">  <!--desktop-grid-->
-              <p class="position lg:w-500 lg:-top-20">deep earth</p>
+              <p class="position font-Josefin-Sans lg:w-500 lg:-top-20 xl:w-400">deep earth</p>
             </div>
-            <div class="py-4">
+            <div class="py-4 hover:opacity-50">
               <img src="../images/mobile/image-night-arcade.jpg" alt="night-arcade" class="w-full lg:hidden"> <!--mobile-block-->
               <img src="../images/desktop/image-night-arcade.jpg" alt="night-arcade" class="mobile:hidden md:hidden lg:block">  <!--desktop-grid-->
-              <p class="position bg-transparent lg:w-500 lg:-top-20">night arcade</p>
+              <p class="position font-Josefin-Sans bg-transparent lg:w-500 lg:-top-20">night arcade</p>
             </div>
-            <div class="py-4">
+            <div class="py-4 hover:opacity-50">
               <img src="../images/mobile/image-soccer-team.jpg" alt="soccer-team" class="w-full lg:hidden"><!--mobile-block-->
               <img src="../images/desktop/image-soccer-team.jpg" alt="soccer-team" class="mobile:hidden md:hidden lg:block"><!--desktop-grid-->
-              <p class="position-adj lg:w-500 lg:-top-20">soccer team vr</p>
+              <p class="position-adj font-Josefin-Sans lg:w-500 lg:-top-20">soccer team vr</p>
             </div>
-            <div class="py-4">
+            <div class="py-4 hover:opacity-50">
               <img src="../images/mobile/image-grid.jpg" alt="iimage-grid" class="w-full lg:hidden"><!--mobile-block-->
               <img src="../images/desktop/image-grid.jpg" alt="image-grid" class="mobile:hidden md:hidden lg:block"><!--desktop-grid-->
-              <p class="position lg:w-300 lg:-top-20">the grid</p>
+              <p class="uppercase font-Josefin-Sans text-white text-left text-2xl w-200 relative mx-4 left-0 -top-400 lg:w-300 lg:-top-20">the grid</p>
             </div>
-            <div class="py-4">
+            <div class="py-4 hover:opacity-50">
               <img src="../images/mobile/image-from-above.jpg" alt="from-above" class="w-full lg:hidden"><!--mobile-block-->
               <img src="../images/desktop/image-from-above.jpg" alt="from-above" class="mobile:hidden md:hidden lg:block"><!--desktop-grid-->
-              <p class="position-adj lg:w-500 lg:-top-20">from up above vr</p>
+              <p class="uppercase font-Josefin-Sans text-white text-left text-2xl w-400 relative ml-4 left-0 -top-400 lg:w-600 lg:-top-20 xl:w-500">from up above vr</p>
             </div>
-            <div class="py-4">
+            <div class="py-4 hover:opacity-50">
               <img src="../images/mobile/image-pocket-borealis.jpg" alt="pocket-borealis" class="w-full lg:hidden"><!--mobile-block-->
               <img src="../images/desktop/image-pocket-borealis.jpg" alt="pocket-borealis" class="mobile:hidden md:hidden lg:block"><!--desktop-grid-->
-              <p class="position lg:w-500 lg:-top-20">pocket borealis</p>
+              <p class="position font-Josefin-Sans lg:w-500 lg:-top-20">pocket borealis</p>
             </div>
-            <div class="py-4">
+            <div class="py-4 hover:opacity-50">
               <img src="../images/mobile/image-curiosity.jpg" alt="curiosity" class="w-full lg:hidden"><!--mobile-block-->
               <img src="../images/desktop/image-curiosity.jpg" alt="image-curiosity" class="mobile:hidden md:hidden lg:block"><!--desktop-grid-->
-              <p class="position lg:w-500 lg:-top-20">the curosity</p>
+              <p class="position font-Josefin-Sans lg:w-500 lg:-top-20">the curosity</p>
             </div>
-            <div class="py-4">
+            <div class="py-4 hover:opacity-50">
               <img src="../images/mobile/image-fisheye.jpg" alt="fisheye" class="w-full lg:hidden"><!--mobile-block-->
               <img src="../images/desktop/image-fisheye.jpg" alt="fisheye" class="mobile:hidden md:hidden lg:block"><!--desktop-grid-->
-              <p class="position-adj lg:w-500 lg:-top-20">make it fisheye</p>
+              <p class="position font-Josefin-Sans-adj lg:w-500 lg:-top-20">make it fisheye</p>
             </div>
           </div>
         </div>
-        <a href="/"><p class="uppercase text-center p border-2 border-black bg-white w-400 mx-auto my-100 lg:hidden">See all</p></a>
+        <a href="/"><p class="uppercase font-Josefin-Sans text-center p border-2 border-black bg-white w-400 mx-auto my-100 lg:hidden">See all</p></a>
       </section>
 
       <!-- footer -->
@@ -108,27 +124,27 @@
         </div>
 
         <!-- footer-links -->
-          <span class="text-center">
-            <ul class="text-white md:block lg:flex px-105">
-              <li class="mx-2 px-auto py-4"><a href="/">About</a></li>
-              <li class="mx-2 px-auto py-4"><a href="/">Careers</a></li>
-              <li class="mx-2 px-auto py-4"><a href="/">Events</a></li>
-              <li class="mx-2 px-auto py-4"><a href="/">Products</a></li>
-              <li class="mx-2 px-auto py-4"><a href="/">Support</a></li>
+          <span class="text-center font-Alata">
+            <ul class="text-white md:block lg:flex px-4">
+              <li class="mx-2 px-auto py-4 hovering"><a href="/">About</a></li>
+              <li class="mx-2 px-auto py-4 hovering"><a href="/">Careers</a></li>
+              <li class="mx-2 px-auto py-4 hovering"><a href="/">Events</a></li>
+              <li class="mx-2 px-auto py-4 hovering"><a href="/">Products</a></li>
+              <li class="mx-2 px-auto py-4 hovering"><a href="/">Support</a></li>
             </ul>
           </span>
       </div>
 
 
-      <div class="flex-col md:justify-center lg:justify-end lg:px-100 lg:mx-105">
+      <div class="flex-col md:justify-center lg:justify-end lg:mx-105">
           <!-- footer-socials -->
-          <span class="flex py-105 mx-auto justify-center text-center md:justify-center lg:justify-end">
+          <span class="flex py-105 mx-auto justify-center text-center md:justify-center  cursor-pointer lg:justify-end lg:px-4 xl:px-16">
             <a href="/" class="mx-2 px-1"><img src="../images/icon-facebook.svg" alt="facebook"></a>
             <a href="/" class="mx-2 px-1"><img src="../images/icon-twitter.svg" alt="twitter"></a>
             <a href="/" class="mx-2 px-1"><img src="../images/icon-pinterest.svg" alt="pinterest"></a>
             <a href="/" class="mx-2 px-1"><img src="../images/icon-instagram.svg" alt="instagram"></a>
           </span>
-          <span class="text-center text-white mt-105 md:justify-center lg:px-105 lg:text-right lg:mx-105"><p class="py-4">© 2021 Loopstudios. All rights reserved.</p></span>
+          <span class="font-Alata text-center text-white mt-105 md:justify-center sm:py-4 lg:text-right"><p class="lg:p-4 xl:px-16">© 2021 Loopstudios. All rights reserved.</p></span>
       </div>
     </footer>
 
@@ -137,5 +153,6 @@
           Challenge by <a href="https://www.frontendmentor.io?ref=challenge" class="" target="_blank">Frontend Mentor</a>.
           Coded by <a href="ampney.github.io" class="">Ampney</a>.
         </div>
+        <script type="text/javascript" src="sandbox.js"></script>
   </body>
 </html>
